@@ -1,0 +1,377 @@
+@font-face {
+    font-family: 'ArchivoBlack-Regular';
+    src:
+      url('../fonts/ArchivoBlack-Regular.woff2') format('woff2'),
+      url('../fonts/ArchivoBlack-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OpenSans-Bold';
+    src:
+      url('../fonts/OpenSans-Bold.woff2') format('woff2'),
+      url('../fonts/OpenSans-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OpenSans-Regular';
+    src:
+      url('../fonts/OpenSans-Regular.woff2') format('woff2'),
+      url('../fonts/OpenSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OpenSans-SemiBold';
+    src:
+      url('../fonts/OpenSans-SemiBold.woff2') format('woff2'),
+      url('../fonts/OpenSans-SemiBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 40px 120px 100px 120px;
+  background-color: #26000D;
+  background-image:
+    radial-gradient(
+      circle 500px at calc(100% - 240px) 250px,
+      rgba(188, 77, 102, 0.55) 0%,
+      rgba(188, 77, 102, 0.25) 35%,
+      rgba(188, 77, 102, 0.08) 65%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle 500px at 50% calc(100% - 100px),
+      rgba(188, 77, 102, 0.55) 0%,
+      rgba(188, 77, 102, 0.25) 35%,
+      rgba(188, 77, 102, 0.08) 65%,
+      transparent 100%
+    );
+  background-repeat: no-repeat;
+  color: #EDE3D8;
+  gap: 100px;
+}
+
+.header, .content, .footer {
+  width: 100%;
+}
+
+
+.header {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.header__info {
+  font-family: "OpenSans-Regular";
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 1;
+  min-width: 0;
+}
+
+.header__title {
+  font-family: "ArchivoBlack-Regular";
+  display: flex;
+  margin: 0;
+  font-size: 72px;
+}
+
+.header__description {
+  margin: 15px 0;
+}
+
+.header__image {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  align-self: flex-start;
+  width: 30%;
+}
+
+.header__skills {
+  width: 100%;
+}
+
+.header__skill-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.header__skill-icon {
+  width: 50px;
+}
+
+.header__role {
+  font-family:"OpenSans-Regular";
+  font-size: 18px;
+  margin: 15px 0;
+  opacity: .5;
+}
+
+.header__links{
+  font-family: "OpenSans-SemiBold";
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+  gap: 24px;
+}
+
+.header__link {
+  padding-bottom: 6px;
+  background-image: linear-gradient(90deg, #BC4D66, #CD7C8E);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 100% 4px;
+  transition: opacity 0.2s ease, background-size 0.2s ease;
+}
+
+.header__link, .card__link, .footer__email {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header__subtitle, .content__subtitle, .footer__subtitle {
+  font-family: "ArchivoBlack-Regular";
+  font-size: 40px;
+  margin: 0;
+}
+
+.content__cards {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  margin-top: 50px;
+}
+
+.card {
+  flex: 1;
+  background-color: #1C000A;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__title{
+  font-family: "OpenSans-Bold";
+  font-size: 24px;
+  margin: 0;
+}
+
+.card__description {
+  margin: 20px 0 30px 0;
+}
+
+.card__text {
+  font-family: "OpenSans-Regular";
+  font-size: 18px;
+  margin: 0;
+}
+
+.card__info {
+  padding: 30px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__image-container {
+  position: relative;
+}
+
+.card__image {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  width: 100%;
+  display: block;
+}
+
+.card__icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  left: 12px;
+  bottom: 10px;
+  gap: 10px;
+  z-index: 1;
+}
+
+.card__icon {
+  width: 40px;
+}
+
+.card__veil {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, transparent 40%, rgba(28, 0, 10, 0.5) 100%);
+  pointer-events: none;
+}
+
+.card__links{
+  margin-top: auto;
+  font-family: "OpenSans-Regular";
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: 20px;
+  font-size: 16px;
+}
+
+.card__links-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer__icons {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  margin-top: 10px;
+}
+
+.footer__email {
+  font-family: "OpenSans-Regular";
+  color: #D7B79E;
+}
+
+.card__text-block {
+  display: block;
+}
+
+.header__link:hover, .card__links-group:hover, .footer__email:hover, .footer__icon:hover {
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 1023px) {
+
+  body {
+    margin: 40px 40px 100px 40px;
+    gap: 80px;
+  }
+
+  .header__title {
+    font-size: 58px;
+  }
+
+  .header__role {
+    margin: 14px 0 10px 0;
+  }
+
+  .header__links {
+    margin-top: 10px;
+  }
+
+  .header__description {
+    margin: 10px 0;
+  }
+
+  .header__skill-icons {
+    margin-top: 40px;
+  }
+
+  .content__cards {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  .header__role-separator {
+    display: none;
+  }
+  .header__role-text {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  body {
+    margin: 20px;
+    gap: 60px;
+  }
+
+  .header {
+    gap: 30px;
+  }
+
+  .header__title {
+    font-size: 36px;
+  }
+
+  .header__role {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+
+  .header__image {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+  }
+
+  .header__links {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .header__skill-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: flex-start;
+    margin-top: 30px;
+  }
+
+  .header__skill-icon {
+    width: 30px;
+  }
+
+  .header__subtitle, .content__subtitle, .footer__subtitle {
+    font-size: 28px;
+
+  }
+
+  .card__title{
+    font-size: 20px;
+  }
+
+  .card__text {
+    font-size: 16px;
+  }
+
+  .card__icon {
+    width: 20px;
+  }
+
+}
