@@ -43,18 +43,18 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  padding: 40px 120px 100px 120px;
+  /* padding: 40px 120px 100px 120px; */
   background-color: #26000D;
   background-image:
     radial-gradient(
-      circle 500px at calc(100% - 240px) 250px,
+      circle 500px at calc(50% + 480px) 250px,
       rgba(188, 77, 102, 0.55) 0%,
       rgba(188, 77, 102, 0.25) 35%,
       rgba(188, 77, 102, 0.08) 65%,
       transparent 100%
     ),
     radial-gradient(
-      circle 500px at 50% calc(100% - 100px),
+      circle 500px at 50% calc(100% - 140px),
       rgba(188, 77, 102, 0.55) 0%,
       rgba(188, 77, 102, 0.25) 35%,
       rgba(188, 77, 102, 0.08) 65%,
@@ -62,6 +62,15 @@ body {
     );
   background-repeat: no-repeat;
   color: #EDE3D8;
+  gap: 100px;
+}
+
+.page {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 120px 100px;
+  display: flex;
+  flex-direction: column;
   gap: 100px;
 }
 
@@ -89,6 +98,7 @@ body {
 
 .header__title {
   font-family: "ArchivoBlack-Regular";
+  font-weight: 400;
   display: flex;
   margin: 0;
   font-size: 72px;
@@ -99,10 +109,10 @@ body {
 }
 
 .header__image {
-  aspect-ratio: 1 / 1;
+  width: 387px;
+  height: 500px;
   object-fit: cover;
   align-self: flex-start;
-  width: 30%;
 }
 
 .header__skills {
@@ -152,6 +162,7 @@ body {
 .header__subtitle, .content__subtitle, .footer__subtitle {
   font-family: "ArchivoBlack-Regular";
   font-size: 40px;
+  font-weight: 400px;
   margin: 0;
 }
 
@@ -259,6 +270,9 @@ body {
   flex-direction: row;
   gap: 60px;
   margin-top: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .footer__email {
@@ -270,13 +284,13 @@ body {
   display: block;
 }
 
-.header__link:hover, .card__links-group:hover, .footer__email:hover, .footer__icon:hover {
+.header__link:hover, .card__links-group:hover, .footer__email:hover, .footer__link:hover {
   opacity: 0.5;
 }
 
 @media screen and (max-width: 1023px) {
 
-  body {
+  .page {
     padding: 40px 40px 100px 40px;
     gap: 80px;
   }
@@ -312,11 +326,16 @@ body {
   .header__role-text {
     display: block;
   }
+
+  .header__image {
+    width: 216px;
+    height: 280px;
+  }
 }
 
 @media screen and (max-width: 767px) {
 
-  body {
+  .page {
     padding: 20px;
     gap: 60px;
   }
